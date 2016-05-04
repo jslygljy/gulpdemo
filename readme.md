@@ -26,41 +26,12 @@
 
 
 >#1.gulp server  本地静态服务
-
-***
 >#2.gulp 处理ES6
-
-***
-
 >#3.gulp js 打包，压缩，混淆js
-
-***
-
 >#4.gulp css 打包，压缩，兼容css
-
-***
-
 >#5.gulp html 打包，压缩html
-
-***
-
 >#6.gulp index 压缩首页.html
-
-***
-
 >#7.gulp watch 监听文件变化
-
-***
-
 >#8.gulp copy 复制静态文件
-
-***
-
 >#9.gulp serve:dev 开启开发服务器
-
-***
-
 >#10.gulp init 初始化或者json、libs文件变化使用
-
-***
-
