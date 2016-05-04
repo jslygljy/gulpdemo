@@ -1,0 +1,31 @@
+{
+  "name": "shop-mgnt",
+  "version": "1.0.0",
+  "description": "shops management",
+  "main": "index.js",
+  "scripts": {
+    "server": "gulp serve:dev",
+    "init": "gulp init",
+    "assetschange": "gulp assetschange",
+    "appchange": "gulp appchange",
+    "addfiles": "gulp addfiles"
+  },
+  "author": "Yao Cheng",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.4",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-scss": "^1.3.17",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sprite-generator": "^0.2.3",
+    "gulp-uglify": "^1.5.3",
+    "gulp-webserver": "^0.9.1"
+  }
+}
