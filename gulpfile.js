@@ -18,16 +18,7 @@
             ["app/js/index.js"],
         ],
         index: ["app/index.html"],
-        templates: ["sst/modules/**/*.html", "sst/components/**/*.html"],
         copy: ["sst/assets/lang/*.*", "sst/assets/imgs/*.*", "sst/weburl.js", "sst/assets/fonts/*.*", "sst/config.js"], //不参与编译的文件
-        app: ["sst/routers.js", "sst/app.js"], //angularjs的入口文件和通用配置
-        assetsLibs: ["sst/assets/libs/angular.js",
-            "sst/assets/libs/angular-translate.js",
-            "sst/assets/libs/ngStorage.min.js",
-            "sst/assets/libs/Chart.js",
-            "sst/assets/libs/*.js",
-            "sst/components/**/*.js"
-        ]
     };
 
     //压缩之后的路径
