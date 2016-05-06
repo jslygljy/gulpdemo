@@ -13,12 +13,14 @@
         server: "dist",
         css: ["app/css/*.css"],
         es6:["app/js/es6.js"],
+        scss:['app/css/*.scss'],
         js: [
             //["sst/modules/analysis/*.service.js", "sst/modules/analysis/analysis.js"],
             ["app/js/index.js"],
         ],
         index: ["app/index.html"],
         copy: ["sst/assets/lang/*.*", "sst/assets/imgs/*.*", "sst/weburl.js", "sst/assets/fonts/*.*", "sst/config.js"], //不参与编译的文件
+        templates:['app/*.html']
     };
 
     //压缩之后的路径
@@ -123,6 +125,19 @@
     });
 
     /**
+     * 处理compass
+     */
+    gulp.task('compass', function() {
+      gulp.src('app/css/*.scss')
+        .pipe(plugins.compass({
+          config_file: 'config.rb',
+          css: 'stylesheets',
+          sass: 'sass'
+        }))
+        .pipe(gulp.dest('dist/styles'));
+    });
+
+    /**
      * 监听文件变化
      */
     gulp.task("watch", function () {
@@ -131,6 +146,8 @@
         gulp.watch(srcPaths.index, ["index"]); //监听文件变化
         gulp.watch(srcPaths.templates, ["html"]); //监听文件变化
         gulp.watch(srcPaths.es6, ["es6"]); //监听文件变化
+        gulp.watch(srcPaths.scss, ["compass"]); //监听文件变化
+        
     });
 
     /**
@@ -153,6 +170,7 @@
             prefix: 1
         }));
     });
+
 
     /**
      * 压缩app.js
